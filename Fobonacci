@@ -1,0 +1,34 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+
+class fib
+{
+	private:
+		int n;
+	public:
+		fib(int n1);
+};
+
+fib::fib(int n1)
+{
+	int fib1=0, fib2=1, fib3=1;
+	cout<<"The Fibonacci Series is: "<<endl<<fib1<<" "<<fib2<<" ";
+	while (fib1 + fib2 < n1)
+	{	
+		fib3=fib1 + fib2;
+		fib1=fib2;
+		fib2=fib3;
+		cout<<fib3<<" ";
+	}
+	cout<<endl;
+}
+
+void main()
+{
+	int n2,a;
+	cout<<"enter n value (n<20): ";
+	cin>>n2;
+	fib fib(n2);
+	getch();
+}
